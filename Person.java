@@ -3,7 +3,6 @@ package package1;
 public class Person extends TelephoneEntry {
     private String name;
     private String lastName;
-    private Address address;
 
     Person(String newName, String newLastName, Address newAddress) {
         name = newName;
@@ -19,6 +18,7 @@ public class Person extends TelephoneEntry {
         return lastName;
     }
 
+    @Override
     public Address getAddress() {
         return address;
     }
@@ -31,6 +31,7 @@ public class Person extends TelephoneEntry {
         lastName = newLastName;
     }
 
+    @Override
     public void setAdress(String newCountry, String newRegion, String newCity, String newPostCode, String newStreetName,
             String newHouseNumber, String newCountryCode, String newLocalNumber) {
         address = new Address(newCountry, newRegion, newCity, newPostCode, newStreetName, newHouseNumber,
